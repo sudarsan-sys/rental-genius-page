@@ -25,7 +25,7 @@ const Contact = () => {
           <Badge variant="outline" className="mb-4">
             Get In Touch
           </Badge>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-6">
             Contact Tech Trove Systems – Chennai's{" "}
             <span className="bg-gradient-primary bg-clip-text text-transparent">Trusted Rental Partner</span>
           </h2>
@@ -102,7 +102,17 @@ const Contact = () => {
                     <div>
                       <h4 className="font-semibold mb-1">WhatsApp Support</h4>
                       <p className="text-muted-foreground">Quick support available</p>
-                      <Button variant="outline" size="sm" className="mt-2">
+                      <Button 
+                        variant="outline" 
+                        size="sm" 
+                        className="mt-2"
+                        onClick={() => {
+                          const message = `Hi! I'd like to get more information about your IT rental services.`;
+                          const encodedMessage = encodeURIComponent(message);
+                          const whatsappUrl = `https://wa.me/918220722044?text=${encodedMessage}`;
+                          window.open(whatsappUrl, '_blank');
+                        }}
+                      >
                         Start Chat
                       </Button>
                     </div>

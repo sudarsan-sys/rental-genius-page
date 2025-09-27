@@ -46,7 +46,7 @@ const About = () => {
           <Badge variant="outline" className="mb-4">
             About Us
           </Badge>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-6">
             About Tech Trove Systems – 25+ Years of Trusted 
             <span className="bg-gradient-primary bg-clip-text text-transparent"> IT Rentals in Chennai</span>
           </h2>

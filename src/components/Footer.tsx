@@ -117,11 +117,26 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-6">Connect With Us</h4>
             <div className="space-y-4 mb-6">
-              <Button variant="outline-white" className="w-full justify-start">
+              <Button 
+                variant="outline-white" 
+                className="w-full justify-start"
+                onClick={() => {
+                  window.location.href = 'tel:+918220722044';
+                }}
+              >
                 <Phone className="w-4 h-4 mr-2" />
                 Call Us
               </Button>
-              <Button variant="outline-white" className="w-full justify-start">
+              <Button 
+                variant="outline-white" 
+                className="w-full justify-start"
+                onClick={() => {
+                  const message = `Hi! I'd like to get more information about your IT rental services.`;
+                  const encodedMessage = encodeURIComponent(message);
+                  const whatsappUrl = `https://wa.me/918220722044?text=${encodedMessage}`;
+                  window.open(whatsappUrl, '_blank');
+                }}
+              >
                 <MessageCircle className="w-4 h-4 mr-2" />
                 WhatsApp
               </Button>
