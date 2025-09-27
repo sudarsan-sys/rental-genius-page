@@ -10,9 +10,10 @@
     "build:prod": "vite build --mode production",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy:netlify": "npm run build && netlify deploy --prod --dir=dist",
-    "deploy:vercel": "npm run build && vercel --prod",
-    "deploy:firebase": "npm run build && firebase deploy",
+    "deploy:netlify": "npm run build && node deploy.js && netlify deploy --prod --dir=dist",
+    "deploy:vercel": "npm run build && node deploy.js && vercel --prod",
+    "deploy:firebase": "npm run build && node deploy.js && firebase deploy",
+    "deploy:prepare": "npm run build && node deploy.js",
     "test:routes": "echo 'Visit /test-routes.html after deployment to test all routes'"
   },
   "dependencies": {
