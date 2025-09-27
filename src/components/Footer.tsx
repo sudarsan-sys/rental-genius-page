@@ -15,20 +15,57 @@ import techTroveLogo from "@/assets/tech-trove-logo.png";
 
 const Footer = () => {
   const quickLinks = [
-    { name: "Home", href: "#home" },
-    { name: "About Us", href: "#about" },
-    { name: "Services", href: "#services" },
-    { name: "Gallery", href: "#gallery" },
-    { name: "Contact", href: "#contact" },
+    { 
+      name: "Home", 
+      onClick: () => {
+        const homeSection = document.getElementById('home');
+        if (homeSection) {
+          homeSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    },
+    { 
+      name: "About Us", 
+      onClick: () => {
+        const aboutSection = document.getElementById('about');
+        if (aboutSection) {
+          aboutSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    },
+    { 
+      name: "Services", 
+      onClick: () => {
+        const servicesSection = document.getElementById('services');
+        if (servicesSection) {
+          servicesSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    },
+    { 
+      name: "Gallery", 
+      onClick: () => {
+        window.location.href = '#/gallery';
+      }
+    },
+    { 
+      name: "Contact", 
+      onClick: () => {
+        const contactSection = document.getElementById('contact');
+        if (contactSection) {
+          contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    },
   ];
 
   const services = [
-    { name: "Laptop Rental in Chennai", href: "#laptop-rentals" },
-    { name: "Desktop Rental in Chennai", href: "#desktop-rentals" },
-    { name: "Graphic Workstation Rental", href: "#workstation-rentals" },
-    { name: "Gaming Laptop Rental", href: "#gaming-rentals" },
-    { name: "Server Rental", href: "#server-rentals" },
-    { name: "Projector Rental", href: "#projector-rentals" },
+    { name: "Laptop Rental in Chennai", href: "#/laptop-rental" },
+    { name: "Desktop Rental in Chennai", href: "#/desktop-rental" },
+    { name: "Graphic Workstation Rental", href: "#/workstation-rental" },
+    { name: "Gaming Laptop Rental", href: "#/gaming-laptop-rental" },
+    { name: "Server Rental", href: "#/server-rental" },
+    { name: "Projector Rental", href: "#/projector-rental" },
   ];
 
   return (
@@ -85,12 +122,12 @@ const Footer = () => {
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <a 
-                    href={link.href} 
-                    className="text-primary-foreground/80 hover:text-secondary-glow transition-colors duration-300"
+                  <button 
+                    onClick={link.onClick}
+                    className="text-primary-foreground/80 hover:text-secondary-glow transition-colors duration-300 text-left"
                   >
                     {link.name}
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>

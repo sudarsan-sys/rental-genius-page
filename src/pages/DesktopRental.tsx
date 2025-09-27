@@ -22,7 +22,7 @@ Thank you!`;
   };
 
   const handleContactUs = () => {
-    window.location.href = '/#contact';
+    window.location.href = '#/';
   };
 
   const features = [
