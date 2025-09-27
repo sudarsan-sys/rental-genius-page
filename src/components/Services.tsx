@@ -23,7 +23,7 @@ const Services = () => {
       description: "Affordable laptops for work, study, or personal needs. Short-term & long-term options available.",
       features: ["High-performance models", "Latest software installed", "24/7 technical support"],
       gradient: "from-primary to-primary-glow",
-      route: "/laptop-rental",
+      route: "#/laptop-rental",
     },
     {
       id: "desktop-rentals", 
@@ -32,7 +32,7 @@ const Services = () => {
       description: "High-performance desktops for offices, developers, and designers with complete setup support.",
       features: ["Professional workstations", "Custom configurations", "On-site installation"],
       gradient: "from-secondary to-secondary-glow",
-      route: "/desktop-rental",
+      route: "#/desktop-rental",
     },
     {
       id: "workstation-rentals",
@@ -41,7 +41,7 @@ const Services = () => {
       description: "Graphics-intensive and CAD-ready workstations for engineers and creative professionals.",
       features: ["High-end graphics cards", "Professional software", "Performance optimization"],
       gradient: "from-primary to-secondary",
-      route: "/workstation-rental",
+      route: "#/workstation-rental",
     },
     {
       id: "gaming-rentals",
@@ -50,7 +50,7 @@ const Services = () => {
       description: "High-end gaming laptops for eSports, events, and testing with latest graphics capabilities.",
       features: ["RTX graphics cards", "High refresh displays", "Gaming peripherals"],
       gradient: "from-secondary to-primary",
-      route: "/gaming-laptop-rental",
+      route: "#/gaming-laptop-rental",
     },
     {
       id: "server-rentals",
@@ -59,7 +59,7 @@ const Services = () => {
       description: "Secure, scalable server rentals for startups and enterprises with managed services.",
       features: ["Enterprise-grade hardware", "24/7 monitoring", "Backup solutions"],
       gradient: "from-primary-glow to-secondary-glow",
-      route: "/server-rental",
+      route: "#/server-rental",
     },
     {
       id: "projector-rentals",
@@ -68,7 +68,7 @@ const Services = () => {
       description: "Business-grade projectors for meetings, events, and presentations with setup assistance.",
       features: ["4K resolution support", "Wireless connectivity", "Complete setup service"],
       gradient: "from-secondary-glow to-primary",
-      route: "/projector-rental",
+      route: "#/projector-rental",
     },
   ];
 

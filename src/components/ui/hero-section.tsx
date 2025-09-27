@@ -67,16 +67,16 @@ export default function HeroSection() {
                 <path d="m4.5 7.2 3.793 3.793a1 1 0 0 0 1.414 0L13.5 7.2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
               <div className="absolute bg-white font-normal flex flex-col gap-2 w-max rounded-lg p-4 top-36 left-0 opacity-0 -translate-y-full group-hover:top-44 group-hover:opacity-100 transition-all duration-300 shadow-lg border z-50">
-                <a href="/laptop-rental" className="hover:translate-x-1 hover:text-primary transition-all">Laptop Rentals</a>
-                <a href="/desktop-rental" className="hover:translate-x-1 hover:text-primary transition-all">Desktop Rentals</a>
-                <a href="/workstation-rental" className="hover:translate-x-1 hover:text-primary transition-all">Workstation Rentals</a>
-                <a href="/gaming-laptop-rental" className="hover:translate-x-1 hover:text-primary transition-all">Gaming Laptop Rentals</a>
-                <a href="/server-rental" className="hover:translate-x-1 hover:text-primary transition-all">Server Rentals</a>
-                <a href="/projector-rental" className="hover:translate-x-1 hover:text-primary transition-all">Projector Rentals</a>
+                <a href="#/laptop-rental" className="hover:translate-x-1 hover:text-primary transition-all">Laptop Rentals</a>
+                <a href="#/desktop-rental" className="hover:translate-x-1 hover:text-primary transition-all">Desktop Rentals</a>
+                <a href="#/workstation-rental" className="hover:translate-x-1 hover:text-primary transition-all">Workstation Rentals</a>
+                <a href="#/gaming-laptop-rental" className="hover:translate-x-1 hover:text-primary transition-all">Gaming Laptop Rentals</a>
+                <a href="#/server-rental" className="hover:translate-x-1 hover:text-primary transition-all">Server Rentals</a>
+                <a href="#/projector-rental" className="hover:translate-x-1 hover:text-primary transition-all">Projector Rentals</a>
               </div>
             </div>
 
-            <a href="/gallery" className="hover:text-primary transition-colors">Gallery</a>
+            <a href="#/gallery" className="hover:text-primary transition-colors">Gallery</a>
             <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
 
             <button

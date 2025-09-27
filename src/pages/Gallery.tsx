@@ -300,11 +300,11 @@ Thank you!`;
       <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <a href="/" className="flex items-center space-x-3">
+            <a href="#/" className="flex items-center space-x-3">
               <img src={techTroveLogo} alt="Tech Trove Systems" className="h-12 w-auto" />
             </a>
             <Button variant="outline" asChild>
-              <a href="/">
+              <a href="#/">
                 <ArrowLeft className="h-4 w-4 mr-2" />
                 Back to Home
               </a>

@@ -16,15 +16,12 @@ import Gallery from "./pages/Gallery";
 const queryClient = new QueryClient();
 
 const App = () => {
-  // Use HashRouter for better compatibility with static hosting
-  const Router = process.env.NODE_ENV === 'production' ? HashRouter : BrowserRouter;
-  
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <Router>
+        <HashRouter>
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/laptop-rental" element={<LaptopRental />} />
@@ -37,7 +34,7 @@ const App = () => {
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
-        </Router>
+        </HashRouter>
       </TooltipProvider>
     </QueryClientProvider>
   );

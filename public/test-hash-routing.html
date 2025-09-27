@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hash Routing Test - Tech Trove Systems</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background: #f5f5f5; }
+        .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .route { margin: 15px 0; padding: 15px; border: 2px solid #e0e0e0; border-radius: 8px; background: #fafafa; }
+        .route a { text-decoration: none; color: #007bff; font-weight: bold; font-size: 16px; }
+        .route a:hover { text-decoration: underline; color: #0056b3; }
+        .status { margin-left: 15px; padding: 5px 12px; border-radius: 5px; font-size: 14px; font-weight: bold; }
+        .working { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .info { background: #d1ecf1; color: #0c5460; border: 1px solid #bee5eb; }
+        .warning { background: #fff3cd; color: #856404; border: 1px solid #ffeaa7; }
+        h1 { color: #333; text-align: center; margin-bottom: 30px; }
+        .instructions { background: #e7f3ff; padding: 20px; border-radius: 8px; margin-bottom: 30px; }
+        .instructions h3 { margin-top: 0; color: #0066cc; }
+        .instructions ol { margin: 10px 0; }
+        .instructions li { margin: 8px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔗 Hash Routing Test - Tech Trove Systems</h1>
+        
+        <div class="instructions">
+            <h3>📋 Instructions:</h3>
+            <ol>
+                <li><strong>Click each link below</strong> to test hash-based routing</li>
+                <li><strong>Check the URL bar</strong> - it should show #/route-name</li>
+                <li><strong>Verify the page content</strong> changes correctly</li>
+                <li><strong>Test browser refresh</strong> on each route</li>
+                <li><strong>Test direct URL access</strong> by copying and pasting URLs</li>
+            </ol>
+        </div>
+
+        <div class="route">
+            <a href="#/" target="_blank">🏠 Home Page (#/)</a>
+            <span class="status working">Should work</span>
+        </div>
+        
+        <div class="route">
+            <a href="#/laptop-rental" target="_blank">💻 Laptop Rental (#/laptop-rental)</a>
+            <span class="status working">Should work</span>
+        </div>
+        
+        <div class="route">
+            <a href="#/desktop-rental" target="_blank">🖥️ Desktop Rental (#/desktop-rental)</a>
+            <span class="status working">Should work</span>
+        </div>
+        
+        <div class="route">
+            <a href="#/workstation-rental" target="_blank">⚙️ Workstation Rental (#/workstation-rental)</a>
+            <span class="status working">Should work</span>
+        </div>
+        
+        <div class="route">
+            <a href="#/gaming-laptop-rental" target="_blank">🎮 Gaming Laptop Rental (#/gaming-laptop-rental)</a>
+            <span class="status working">Should work</span>
+        </div>
+        
+        <div class="route">
+            <a href="#/server-rental" target="_blank">🖥️ Server Rental (#/server-rental)</a>
+            <span class="status working">Should work</span>
+        </div>
+        
+        <div class="route">
+            <a href="#/projector-rental" target="_blank">📽️ Projector Rental (#/projector-rental)</a>
+            <span class="status working">Should work</span>
+        </div>
+        
+        <div class="route">
+            <a href="#/gallery" target="_blank">🖼️ Gallery (#/gallery)</a>
+            <span class="status working">Should work</span>
+        </div>
+        
+        <div class="route">
+            <a href="#/nonexistent-route" target="_blank">❌ 404 Test (#/nonexistent-route)</a>
+            <span class="status warning">Should show 404</span>
+        </div>
+
+        <div class="instructions">
+            <h3>✅ What's Fixed:</h3>
+            <ul>
+                <li><strong>HashRouter</strong> - Uses # in URLs for better compatibility</li>
+                <li><strong>All navigation links</strong> updated to use hash-based routing</li>
+                <li><strong>Service pages</strong> use hash-based navigation</li>
+                <li><strong>Gallery page</strong> uses hash-based navigation</li>
+                <li><strong>404 handling</strong> works with hash routing</li>
+            </ul>
+        </div>
+
+        <div class="instructions">
+            <h3>🔧 If Still Not Working:</h3>
+            <ol>
+                <li>Clear browser cache (Ctrl+F5 or Cmd+Shift+R)</li>
+                <li>Check browser console for JavaScript errors</li>
+                <li>Ensure all files were uploaded to hosting service</li>
+                <li>Try opening in incognito/private browsing mode</li>
+                <li>Check if your hosting service supports client-side routing</li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>
