@@ -15,8 +15,44 @@ import {
   Linkedin,
   Youtube
 } from "lucide-react";
+import { useState } from "react";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    fullName: '',
+    phoneNumber: '',
+    email: '',
+    serviceRequired: '',
+    rentalDuration: '',
+    additionalRequirements: ''
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSendMessage = () => {
+    const message = `Hi! I'm interested in IT rental services from Tech Trove Systems.
+
+*Name:* ${formData.fullName || 'Not provided'}
+*Phone:* ${formData.phoneNumber || 'Not provided'}
+*Email:* ${formData.email || 'Not provided'}
+*Service Required:* ${formData.serviceRequired || 'Not specified'}
+*Rental Duration:* ${formData.rentalDuration || 'Not specified'}
+*Additional Requirements:* ${formData.additionalRequirements || 'None'}
+
+Please provide me with more details and pricing.
+
+Thank you!`;
+    
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/918220722044?text=${encodedMessage}`;
+    window.open(whatsappUrl, '_blank');
+  };
   return (
     <section id="contact" className="py-20 bg-gradient-subtle">
       <div className="container mx-auto px-4">
@@ -153,38 +189,67 @@ const Contact = () => {
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <label className="text-sm font-medium mb-2 block">Full Name</label>
-                  <Input placeholder="Your full name" />
+                  <Input 
+                    name="fullName"
+                    value={formData.fullName}
+                    onChange={handleInputChange}
+                    placeholder="Your full name" 
+                  />
                 </div>
                 <div>
                   <label className="text-sm font-medium mb-2 block">Phone Number</label>
-                  <Input placeholder="+91 XXXXX XXXXX" />
+                  <Input 
+                    name="phoneNumber"
+                    value={formData.phoneNumber}
+                    onChange={handleInputChange}
+                    placeholder="+91 XXXXX XXXXX" 
+                  />
                 </div>
               </div>
               
               <div>
                 <label className="text-sm font-medium mb-2 block">Email Address</label>
-                <Input type="email" placeholder="your.email@example.com" />
+                <Input 
+                  name="email"
+                  type="email" 
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  placeholder="your.email@example.com" 
+                />
               </div>
               
               <div>
                 <label className="text-sm font-medium mb-2 block">Service Required</label>
-                <Input placeholder="e.g., Laptop Rental, Desktop Rental" />
+                <Input 
+                  name="serviceRequired"
+                  value={formData.serviceRequired}
+                  onChange={handleInputChange}
+                  placeholder="e.g., Laptop Rental, Desktop Rental" 
+                />
               </div>
               
               <div>
                 <label className="text-sm font-medium mb-2 block">Rental Duration</label>
-                <Input placeholder="e.g., 1 week, 1 month, 6 months" />
+                <Input 
+                  name="rentalDuration"
+                  value={formData.rentalDuration}
+                  onChange={handleInputChange}
+                  placeholder="e.g., 1 week, 1 month, 6 months" 
+                />
               </div>
               
               <div>
                 <label className="text-sm font-medium mb-2 block">Additional Requirements</label>
                 <Textarea 
+                  name="additionalRequirements"
+                  value={formData.additionalRequirements}
+                  onChange={handleInputChange}
                   placeholder="Tell us about your specific requirements, quantity needed, delivery location, etc."
                   className="min-h-[120px]"
                 />
               </div>
               
-              <Button variant="cta" className="w-full">
+              <Button variant="cta" className="w-full" onClick={handleSendMessage}>
                 <Send className="w-4 h-4 mr-2" />
                 Send Message & Get Free Quote
               </Button>
