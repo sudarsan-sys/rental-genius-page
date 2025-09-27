@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Route Test - Tech Trove Systems</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .route { margin: 10px 0; padding: 10px; border: 1px solid #ddd; border-radius: 5px; }
+        .route a { text-decoration: none; color: #007bff; font-weight: bold; }
+        .route a:hover { text-decoration: underline; }
+        .status { margin-left: 10px; padding: 2px 8px; border-radius: 3px; font-size: 12px; }
+        .working { background: #d4edda; color: #155724; }
+        .error { background: #f8d7da; color: #721c24; }
+    </style>
+</head>
+<body>
+    <h1>Tech Trove Systems - Route Test</h1>
+    <p>Test all routes to ensure they work properly after deployment:</p>
+    
+    <div class="route">
+        <a href="/" target="_blank">Home Page (/)</a>
+        <span class="status working">Should work</span>
+    </div>
+    
+    <div class="route">
+        <a href="/laptop-rental" target="_blank">Laptop Rental (/laptop-rental)</a>
+        <span class="status working">Should work</span>
+    </div>
+    
+    <div class="route">
+        <a href="/desktop-rental" target="_blank">Desktop Rental (/desktop-rental)</a>
+        <span class="status working">Should work</span>
+    </div>
+    
+    <div class="route">
+        <a href="/workstation-rental" target="_blank">Workstation Rental (/workstation-rental)</a>
+        <span class="status working">Should work</span>
+    </div>
+    
+    <div class="route">
+        <a href="/gaming-laptop-rental" target="_blank">Gaming Laptop Rental (/gaming-laptop-rental)</a>
+        <span class="status working">Should work</span>
+    </div>
+    
+    <div class="route">
+        <a href="/server-rental" target="_blank">Server Rental (/server-rental)</a>
+        <span class="status working">Should work</span>
+    </div>
+    
+    <div class="route">
+        <a href="/projector-rental" target="_blank">Projector Rental (/projector-rental)</a>
+        <span class="status working">Should work</span>
+    </div>
+    
+    <div class="route">
+        <a href="/gallery" target="_blank">Gallery (/gallery)</a>
+        <span class="status working">Should work</span>
+    </div>
+    
+    <div class="route">
+        <a href="/nonexistent-route" target="_blank">404 Test (/nonexistent-route)</a>
+        <span class="status error">Should show 404</span>
+    </div>
+    
+    <h2>Instructions:</h2>
+    <ol>
+        <li>Click each link above to test the routes</li>
+        <li>All service pages should load correctly</li>
+        <li>The 404 test should show the NotFound page</li>
+        <li>If any route shows a blank page or error, the routing configuration needs adjustment</li>
+    </ol>
+    
+    <h2>Deployment Checklist:</h2>
+    <ul>
+        <li>✅ _redirects file created (for Netlify/Vercel)</li>
+        <li>✅ .htaccess file created (for Apache)</li>
+        <li>✅ vercel.json created (for Vercel)</li>
+        <li>✅ netlify.toml created (for Netlify)</li>
+        <li>✅ firebase.json created (for Firebase)</li>
+        <li>✅ 404.html fallback created</li>
+        <li>✅ sitemap.xml created</li>
+        <li>✅ robots.txt updated</li>
+    </ul>
+</body>
+</html>
