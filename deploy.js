@@ -57,3 +57,4 @@ console.log('\n🔧 If routing still doesn\'t work:');
 console.log('- Check your hosting platform\'s documentation');
 console.log('- Ensure all files in dist/ were uploaded');
 console.log('- Try using HashRouter (already configured for production)');
+

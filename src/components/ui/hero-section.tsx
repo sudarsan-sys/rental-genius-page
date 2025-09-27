@@ -41,11 +41,20 @@ export default function HeroSection() {
         * { font-family: 'Poppins', sans-serif; }
       `}</style>
 
-      <section className="bg-[url('https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/hero/gridBackground.png')] w-full bg-no-repeat bg-cover bg-center text-sm pb-44">
+      <section id="home" className="bg-[url('https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/hero/gridBackground.png')] w-full bg-no-repeat bg-cover bg-center text-sm pb-44">
         <nav className="flex items-center justify-between p-4 md:px-16 lg:px-24 xl:px-32 md:py-6 w-full">
-          <a href="#home" aria-label="Tech Trove Systems home" className="flex items-center">
+          <button 
+            onClick={() => {
+              const homeSection = document.getElementById('home');
+              if (homeSection) {
+                homeSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+            aria-label="Tech Trove Systems home" 
+            className="flex items-center"
+          >
             <img src={techTroveLogo} alt="Tech Trove Systems" className="h-14 w-auto" />
-          </a>
+          </button>
 
           <div
             id="menu"
@@ -58,8 +67,28 @@ export default function HeroSection() {
             ].join(' ')}
             aria-hidden={!menuOpen}
           >
-            <a href="#home" className="hover:text-primary transition-colors">Home</a>
-            <a href="#about" className="hover:text-primary transition-colors">About</a>
+            <button 
+              onClick={() => {
+                const homeSection = document.getElementById('home');
+                if (homeSection) {
+                  homeSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              className="hover:text-primary transition-colors"
+            >
+              Home
+            </button>
+            <button 
+              onClick={() => {
+                const aboutSection = document.getElementById('about');
+                if (aboutSection) {
+                  aboutSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              className="hover:text-primary transition-colors"
+            >
+              About
+            </button>
 
             <div className="relative group flex items-center gap-1 cursor-pointer z-50">
               <span>Services</span>
@@ -77,7 +106,17 @@ export default function HeroSection() {
             </div>
 
             <a href="#/gallery" className="hover:text-primary transition-colors">Gallery</a>
-            <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
+            <button 
+              onClick={() => {
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              className="hover:text-primary transition-colors"
+            >
+              Contact
+            </button>
 
             <button
               onClick={() => setMenuOpen(false)}
