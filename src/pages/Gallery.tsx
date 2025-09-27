@@ -470,7 +470,7 @@ Thank you!`;
                     <Button 
                       size="sm" 
                       variant="outline"
-                      onClick={() => window.location.href = '/#contact'}
+                      onClick={() => window.location.href = 'tel:+918220722044'}
                     >
                       <Phone className="h-4 w-4" />
                     </Button>
